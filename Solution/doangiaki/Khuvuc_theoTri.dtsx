@@ -1,0 +1,2240 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/2/2014 10:57:43 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="NGOCDIEM-PC"
+  DTS:CreatorName="ngocdiem-PC\ngocdiem"
+  DTS:DTSID="{0B850D68-31F0-4946-B65D-9C131F2E9430}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2344.23"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Khuvuc_theoTri"
+  DTS:PackageType="5"
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{3FD958C5-1DCA-4F93-A488-655CAE2A1115}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{9A883AEB-B1CF-49E8-AF76-33C5C020B604}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\ngocdiem\Desktop\Doan02_Sources\ChiNhanh02.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{5460A5CC-5F9C-4660-B6CB-D7C84E7F041B}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ga9286\Desktop\doangiaki\Doan02_Sources\ChiNhanh02.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.ERP_BH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0CB02841-ABD2-4F74-931F-2A82E3CB0EE0}"
+      DTS:ObjectName="LocalHost.ERP_BH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=ERP_BH;Provider=SQLNCLI11;Integrated Security=SSPI;Application Name=SSIS-Khuvuc_theoTri-{0CB02841-ABD2-4F74-931F-2A82E3CB0EE0}LocalHost.ERP_BH;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Duyệt các file khách hàng chi nhánh 1"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{AD6ACDB1-6EA9-41F8-8DEE-1C3EF3F2C312}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Duyệt các file khách hàng chi nhánh 1">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{3CDDB7D8-FBCD-4F3C-A595-DEB0BC9B18FD}"
+        DTS:ObjectName="{3CDDB7D8-FBCD-4F3C-A595-DEB0BC9B18FD}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::FolderPath]</DTS:PropertyExpression>
+        <DTS:PropertyExpression
+          DTS:Name="FileSpec">@[User::FileExtention]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\Ga9286\Desktop\doangiaki\Doan02_Sources\ChiNhanh01\Customers\" />
+            <FEFEProperty
+              FileSpec="*.xml" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{81B2ABEA-61BE-466F-8BEB-67C1E3DE1191}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="FileExtention">
+          <DTS:VariableValue
+            DTS:DataType="8">*.xml</DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{BCB63385-D058-49FD-B2FE-4BC8F941057A}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="FilePath">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{B329ABB7-8E7F-49BC-93C8-2E8E0092A50E}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="FolderPath">
+          <DTS:VariableValue
+            DTS:DataType="8">C:\Users\Ga9286\Desktop\doangiaki\Doan02_Sources\ChiNhanh01\Customers\</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{7740225D-8018-4A0B-84B8-5C463A63862B}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Đổ dữ liệu khu vực chi nhánh 1"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v10; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              BLOBTempStoragePath=""
+              bufferTempStoragePath=""
+              version="1">
+              <components>
+                <component
+                  refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Updates column values using expressions"
+                  name="convert quocgia,vungmien,thanhpho theo file excel"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Inputs[Derived Column Input].Columns[City]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="City"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[City]" />
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Inputs[Derived Column Input].Columns[State]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="State"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[State]" />
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Inputs[Derived Column Input].Columns[Country]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Country"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[Country]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output].Columns[quocgia]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output].Columns[quocgia]"
+                          name="quocgia"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[FINDSTRING](#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[Country]},"Vietnam",1) &gt; 0 ? "Việt Nam" : [FINDSTRING](#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[Country]},"USA",1) &gt; 0 ? "Hoa Kỳ" : #{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[Country]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">FINDSTRING(Country,"Vietnam",1) &gt; 0 ? "Việt Nam" : FINDSTRING(Country,"USA",1) &gt; 0 ? "Hoa Kỳ" : Country</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output].Columns[vungmien]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output].Columns[vungmien]"
+                          name="vungmien"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[FINDSTRING](#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[State]},"Northern Vietnam",1) &gt; 0 ? "Miền Bắc" : [FINDSTRING](#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[State]},"Middle Vietnam",1) &gt; 0 ? "Miền Trung" : [FINDSTRING](#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[State]},"Southern Vietnam",1) &gt; 0 ? "Miền Nam" : #{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[State]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">FINDSTRING(State,"Northern Vietnam",1) &gt; 0 ? "Miền Bắc" : FINDSTRING(State,"Middle Vietnam",1) &gt; 0 ? "Miền Trung" : FINDSTRING(State,"Southern Vietnam",1) &gt; 0 ? "Miền Nam" : State</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output].Columns[thanhpho]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output].Columns[thanhpho]"
+                          name="thanhpho"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[FINDSTRING](#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[City]},"HCM",1) &gt; 0 ? "Tp. Hồ Chí Minh" : [FINDSTRING](#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[City]},"Hà Nội",1) &gt; 0 ? "Tp. Hà Nội" : [FINDSTRING](#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[City]},"Đà Nẵng",1) &gt; 0 ? "Tp.Đà Nẵng" : #{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[City]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">FINDSTRING(City,"HCM",1) &gt; 0 ? "Tp. Hồ Chí Minh" : FINDSTRING(City,"Hà Nội",1) &gt; 0 ? "Tp. Hà Nội" : FINDSTRING(City,"Đà Nẵng",1) &gt; 0 ? "Tp.Đà Nẵng" : City</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output].Columns[maKhuvuc]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output].Columns[maKhuvuc]"
+                          name="maKhuvuc"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_WSTR,255)(#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[City]} + #{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[State]} + #{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[Country]})</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_WSTR,255)(City + State + Country)</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="table KhuvucTmp"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[KhuvucTmp]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.ERP_BH]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.ERP_BH]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input].Columns[quocgia]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="quocgia"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[quocgia]"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[quocgia]" />
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input].Columns[vungmien]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="vungmien"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[vungmien]"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[vungmien]" />
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input].Columns[thanhpho]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="thanhpho"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[thanhpho]"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[thanhpho]" />
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input].Columns[maKhuvuc]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="maKhuvuc"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[makv]"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[maKhuvuc]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[makv]"
+                          dataType="wstr"
+                          length="255"
+                          name="makv" />
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[quocgia]"
+                          dataType="wstr"
+                          length="255"
+                          name="quocgia" />
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[vungmien]"
+                          dataType="wstr"
+                          length="255"
+                          name="vungmien" />
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[thanhpho]"
+                          dataType="wstr"
+                          length="255"
+                          name="thanhpho" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All"
+                  componentClassID="Microsoft.UnionAll"
+                  contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+                  name="Union All"
+                  version="1">
+                  <inputs>
+                    <input
+                      refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Inputs[Union All Input 1]"
+                      name="Union All Input 1">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Inputs[Union All Input 1].Columns[CusNumber]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="CusNumber"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[CusNumber]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[CusNumber]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Inputs[Union All Input 1].Columns[CusName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="CusName"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[CusName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[CusName]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Inputs[Union All Input 1].Columns[Gender]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Gender"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[Gender]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[Gender]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Inputs[Union All Input 1].Columns[quocgia]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="quocgia"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output].Columns[quocgia]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[quocgia]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Inputs[Union All Input 1].Columns[vungmien]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="vungmien"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output].Columns[vungmien]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[vungmien]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Inputs[Union All Input 1].Columns[thanhpho]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="thanhpho"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output].Columns[thanhpho]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[thanhpho]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Inputs[Union All Input 1].Columns[maKhuvuc]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="maKhuvuc"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output].Columns[maKhuvuc]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[maKhuvuc]}</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                    <input
+                      refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Inputs[Union All Input 2]"
+                      dangling="true"
+                      hasSideEffects="true"
+                      name="Union All Input 2">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1]"
+                      name="Union All Output 1">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[CusNumber]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[CusNumber]"
+                          name="CusNumber" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[CusName]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[CusName]"
+                          name="CusName" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[Gender]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[Gender]"
+                          name="Gender" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[quocgia]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[quocgia]"
+                          name="quocgia" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[vungmien]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[vungmien]"
+                          name="vungmien" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[thanhpho]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[thanhpho]"
+                          name="thanhpho" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[maKhuvuc]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1].Columns[maKhuvuc]"
+                          name="maKhuvuc" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Extracts data from an XML data file.;Microsoft Corporation;Microsoft SqlServer v10; © 2007 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Extracts data from an XML data file."
+                  name="XML Source"
+                  usesDispositions="true"
+                  validateExternalMetadata="False"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.XmlSourceAdapter</property>
+                    <property
+                      dataType="System.String"
+                      description="The XML data used by the XML source adapter."
+                      expressionType="Notify"
+                      name="XMLData"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable used by the XML source adapter to specify XML data."
+                      name="XMLDataVariable">User::FilePath</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Defines how the XML source adapter gets XML data."
+                      name="AccessMode">1</property>
+                    <property
+                      dataType="System.String"
+                      description="The XML schema definition used by the XML source adapter."
+                      expressionType="Notify"
+                      name="XMLSchemaDefinition">C:\Users\Ga9286\Desktop\doangiaki\Doan02_Sources\ChiNhanh01\Customers\CustomerList.xsd</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Identifies whether or not to use inline schema."
+                      name="UseInlineSchema">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Defines how XML integer types are mapped."
+                      name="XMLIntegerMapping"
+                      typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter">1</property>
+                  </properties>
+                  <outputs>
+                    <output
+                      refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus]"
+                      name="Cus">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Identifies the rowset associated with the output."
+                          name="RowsetID">Cus</property>
+                      </properties>
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[CusNumber]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].ExternalColumns[CusNumber]"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[CusNumber]"
+                          name="CusNumber"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[CusName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].ExternalColumns[CusName]"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[CusName]"
+                          name="CusName"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[Gender]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].ExternalColumns[Gender]"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[Gender]"
+                          name="Gender"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[City]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].ExternalColumns[City]"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[City]"
+                          name="City"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[State]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].ExternalColumns[State]"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[State]"
+                          name="State"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[Country]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].ExternalColumns[Country]"
+                          length="255"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].Columns[Country]"
+                          name="Country"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].ExternalColumns[CusNumber]"
+                          dataType="wstr"
+                          length="255"
+                          name="CusNumber">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].ExternalColumns[CusName]"
+                          dataType="wstr"
+                          length="255"
+                          name="CusName">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].ExternalColumns[Gender]"
+                          dataType="wstr"
+                          length="255"
+                          name="Gender">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].ExternalColumns[City]"
+                          dataType="wstr"
+                          length="255"
+                          name="City">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].ExternalColumns[State]"
+                          dataType="wstr"
+                          length="255"
+                          name="State">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus].ExternalColumns[Country]"
+                          dataType="wstr"
+                          length="255"
+                          name="Country">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              name="CLRType">System.String</property>
+                          </properties>
+                        </externalMetadataColumn>
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output]"
+                      isErrorOut="true"
+                      name="Cus Error Output">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Identifies the rowset associated with the output."
+                          name="RowsetID">Cus</property>
+                      </properties>
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[CusNumber]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].ExternalColumns[CusNumber]"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[CusNumber]"
+                          name="CusNumber" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[CusName]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].ExternalColumns[CusName]"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[CusName]"
+                          name="CusName" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[Gender]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].ExternalColumns[Gender]"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[Gender]"
+                          name="Gender" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[City]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].ExternalColumns[City]"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[City]"
+                          name="City" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[State]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].ExternalColumns[State]"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[State]"
+                          name="State" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[Country]"
+                          dataType="nText"
+                          externalMetadataColumnId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].ExternalColumns[Country]"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[Country]"
+                          name="Country" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].ExternalColumns[CusNumber]"
+                          dataType="nText"
+                          name="CusNumber" />
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].ExternalColumns[CusName]"
+                          dataType="nText"
+                          name="CusName" />
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].ExternalColumns[Gender]"
+                          dataType="nText"
+                          name="Gender" />
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].ExternalColumns[City]"
+                          dataType="nText"
+                          name="City" />
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].ExternalColumns[State]"
+                          dataType="nText"
+                          name="State" />
+                        <externalMetadataColumn
+                          refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus Error Output].ExternalColumns[Country]"
+                          dataType="nText"
+                          name="Country" />
+                      </externalMetadataColumns>
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1.Paths[Cus]"
+                  endId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Inputs[Derived Column Input]"
+                  name="Cus"
+                  startId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source.Outputs[Cus]" />
+                <path
+                  refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1.Paths[Derived Column Output]"
+                  endId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Inputs[Union All Input 1]"
+                  name="Derived Column Output"
+                  startId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1.Paths[Union All Output 1]"
+                  endId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp.Inputs[OLE DB Destination Input]"
+                  name="Union All Output 1"
+                  startId="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All.Outputs[Union All Output 1]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{178C3FA1-0F55-49D1-881B-1BC0E61B38A6}"
+          DTS:ObjectName="{178C3FA1-0F55-49D1-881B-1BC0E61B38A6}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::FilePath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{F653199E-F846-4944-944D-F85F482C8143}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0CB02841-ABD2-4F74-931F-2A82E3CB0EE0}"
+          SQLTask:SqlStatementSource="DELETE FROM KHUVUCTMP ;&#xA;DELETE FROM KHUVUC" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\sort là chép dữ liệu table tạm sang table chính thức"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{390BA486-515F-4AE2-942D-7FDE75E0F534}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="sort là chép dữ liệu table tạm sang table chính thức"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v10; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts data."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Inputs[Sort Input].Columns[makv]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="makv"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[makv]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Inputs[Sort Input].Columns[quocgia]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="quocgia"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[quocgia]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Inputs[Sort Input].Columns[vungmien]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="vungmien"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[vungmien]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Inputs[Sort Input].Columns[thanhpho]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="thanhpho"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[thanhpho]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output].Columns[makv]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output].Columns[makv]"
+                      name="makv"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[makv]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output].Columns[quocgia]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output].Columns[quocgia]"
+                      name="quocgia">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[quocgia]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output].Columns[vungmien]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output].Columns[vungmien]"
+                      name="vungmien">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[vungmien]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output].Columns[thanhpho]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output].Columns[thanhpho]"
+                      name="thanhpho">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[thanhpho]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Table Khuvuc"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Khuvuc]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.ERP_BH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.ERP_BH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input].Columns[makv]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="makv"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input].ExternalColumns[makv]"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output].Columns[makv]" />
+                    <inputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input].Columns[quocgia]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="quocgia"
+                      externalMetadataColumnId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input].ExternalColumns[quocgia]"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output].Columns[quocgia]" />
+                    <inputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input].Columns[vungmien]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="vungmien"
+                      externalMetadataColumnId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input].ExternalColumns[vungmien]"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output].Columns[vungmien]" />
+                    <inputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input].Columns[thanhpho]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="thanhpho"
+                      externalMetadataColumnId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input].ExternalColumns[thanhpho]"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output].Columns[thanhpho]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      dataType="guid"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input].ExternalColumns[makv]"
+                      dataType="wstr"
+                      length="255"
+                      name="makv" />
+                    <externalMetadataColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input].ExternalColumns[thanhpho]"
+                      dataType="wstr"
+                      length="255"
+                      name="thanhpho" />
+                    <externalMetadataColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input].ExternalColumns[quocgia]"
+                      dataType="wstr"
+                      length="255"
+                      name="quocgia" />
+                    <externalMetadataColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input].ExternalColumns[vungmien]"
+                      dataType="wstr"
+                      length="255"
+                      name="vungmien" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Table KhuvucTmp"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[KhuvucTmp]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.ERP_BH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.ERP_BH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[makv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].ExternalColumns[makv]"
+                      length="255"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[makv]"
+                      name="makv"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[quocgia]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].ExternalColumns[quocgia]"
+                      length="255"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[quocgia]"
+                      name="quocgia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[vungmien]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].ExternalColumns[vungmien]"
+                      length="255"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[vungmien]"
+                      name="vungmien"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[thanhpho]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].ExternalColumns[thanhpho]"
+                      length="255"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].Columns[thanhpho]"
+                      name="thanhpho"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].ExternalColumns[makv]"
+                      dataType="wstr"
+                      length="255"
+                      name="makv" />
+                    <externalMetadataColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].ExternalColumns[quocgia]"
+                      dataType="wstr"
+                      length="255"
+                      name="quocgia" />
+                    <externalMetadataColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].ExternalColumns[vungmien]"
+                      dataType="wstr"
+                      length="255"
+                      name="vungmien" />
+                    <externalMetadataColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output].ExternalColumns[thanhpho]"
+                      dataType="wstr"
+                      length="255"
+                      name="thanhpho" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Error Output].Columns[makv]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Error Output].Columns[makv]"
+                      name="makv" />
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Error Output].Columns[quocgia]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Error Output].Columns[quocgia]"
+                      name="quocgia" />
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Error Output].Columns[vungmien]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Error Output].Columns[vungmien]"
+                      name="vungmien" />
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Error Output].Columns[thanhpho]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Error Output].Columns[thanhpho]"
+                      name="thanhpho" />
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\sort là chép dữ liệu table tạm sang table chính thức.Paths[OLE DB Source Output]"
+              endId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\sort là chép dữ liệu table tạm sang table chính thức.Paths[Sort Output]"
+              endId="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Đổ dữ liệu khu vực chi nhánh 2"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6A3EF97E-5BB1-4A23-B122-CD456A56BE14}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Đổ dữ liệu khu vực chi nhánh 2"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v10; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="KhuvucExcel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">KhuVuc$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].Columns[makv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].ExternalColumns[makv]"
+                      length="255"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].Columns[makv]"
+                      name="makv"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].Columns[tpho]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].ExternalColumns[tpho]"
+                      length="255"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].Columns[tpho]"
+                      name="tpho"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].Columns[mien]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].ExternalColumns[mien]"
+                      length="255"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].Columns[mien]"
+                      name="mien"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].Columns[qgia]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].ExternalColumns[qgia]"
+                      length="255"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].Columns[qgia]"
+                      name="qgia"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].ExternalColumns[makv]"
+                      dataType="wstr"
+                      length="255"
+                      name="makv" />
+                    <externalMetadataColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].ExternalColumns[tpho]"
+                      dataType="wstr"
+                      length="255"
+                      name="tpho" />
+                    <externalMetadataColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].ExternalColumns[mien]"
+                      dataType="wstr"
+                      length="255"
+                      name="mien" />
+                    <externalMetadataColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].ExternalColumns[qgia]"
+                      dataType="wstr"
+                      length="255"
+                      name="qgia" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Error Output].Columns[makv]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Error Output].Columns[makv]"
+                      name="makv" />
+                    <outputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Error Output].Columns[tpho]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Error Output].Columns[tpho]"
+                      name="tpho" />
+                    <outputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Error Output].Columns[mien]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Error Output].Columns[mien]"
+                      name="mien" />
+                    <outputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Error Output].Columns[qgia]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Error Output].Columns[qgia]"
+                      name="qgia" />
+                    <outputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="table KhuvucTmp"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[KhuvucTmp]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.ERP_BH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.ERP_BH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input].Columns[makv]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="makv"
+                      externalMetadataColumnId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[makv]"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].Columns[makv]" />
+                    <inputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input].Columns[qgia]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="qgia"
+                      externalMetadataColumnId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[quocgia]"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].Columns[qgia]" />
+                    <inputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input].Columns[mien]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="mien"
+                      externalMetadataColumnId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[vungmien]"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].Columns[mien]" />
+                    <inputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input].Columns[tpho]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="tpho"
+                      externalMetadataColumnId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[thanhpho]"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output].Columns[tpho]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[makv]"
+                      dataType="wstr"
+                      length="255"
+                      name="makv" />
+                    <externalMetadataColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[quocgia]"
+                      dataType="wstr"
+                      length="255"
+                      name="quocgia" />
+                    <externalMetadataColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[vungmien]"
+                      dataType="wstr"
+                      length="255"
+                      name="vungmien" />
+                    <externalMetadataColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input].ExternalColumns[thanhpho]"
+                      dataType="wstr"
+                      length="255"
+                      name="thanhpho" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Đổ dữ liệu khu vực chi nhánh 2.Paths[Excel Source Output]"
+              endId="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{7177F8ED-FBA3-42D2-A180-703A776E3012}"
+      DTS:From="Package\Đổ dữ liệu khu vực chi nhánh 2"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Duyệt các file khách hàng chi nhánh 1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{CEC0C7A5-42B5-4FF7-8152-422C055ACB44}"
+      DTS:From="Package\Duyệt các file khách hàng chi nhánh 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\sort là chép dữ liệu table tạm sang table chính thức" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{44BBC9DF-26D3-45A7-8A32-A2ECCD48806A}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Đổ dữ liệu khu vực chi nhánh 2" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Đổ dữ liệu khu vực chi nhánh 2"
+          TopLeft="173.235849056604,85.3867924528302" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1"
+          TopLeft="44.8679245283018,35.3490566037736" />
+        <ContainerLayout
+          HeaderHeight="43.924528301886795"
+          IsExpanded="True"
+          PanelSize="220,147"
+          Size="220,191"
+          Id="Package\Duyệt các file khách hàng chi nhánh 1"
+          TopLeft="353.915094339623,5.5" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Execute SQL Task"
+          TopLeft="5.5,83.3867924528302" />
+        <NodeLayout
+          Size="186.5,44"
+          Id="Package\sort là chép dữ liệu table tạm sang table chính thức"
+          TopLeft="620.518867924528,92.3679245283019" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="309.235849056604,104.193396226415">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="44.679245283019,0"
+              Start="0,0"
+              End="37.179245283019,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="37.179245283019,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="573.915094339623,101">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46.603773584905,13.3679245283019"
+              Start="0,0"
+              End="39.103773584905,13.3679245283019">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="19.3018867924525,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.3018867924525,0"
+                    Point2="23.3018867924525,0"
+                    Point3="23.3018867924525,4" />
+                  <mssgle:LineSegment
+                    End="23.3018867924525,9.3679245283019" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23.3018867924525,9.3679245283019"
+                    Point2="23.3018867924525,13.3679245283019"
+                    Point3="27.3018867924525,13.3679245283019" />
+                  <mssgle:LineSegment
+                    End="39.103773584905,13.3679245283019" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="141.27358490566,105.349056603774">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31.9622641509434,2"
+              Start="0,0"
+              End="24.4622641509434,2">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="15.9622641509434,0" />
+                  <mssgle:LineSegment
+                    End="15.9622641509434,2" />
+                  <mssgle:LineSegment
+                    End="24.4622641509434,2" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Đổ dữ liệu khu vực chi nhánh 2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source"
+          TopLeft="5.5,25.8571428571429" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp"
+          TopLeft="245,80" />
+        <EdgeLayout
+          Id="Package\Đổ dữ liệu khu vực chi nhánh 2.Paths[Excel Source Output]"
+          TopLeft="141.5,47.8571428571429">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="103.5,53.1428571428571"
+              Start="0,0"
+              End="96,53.1428571428571">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="47.75,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47.75,0"
+                    Point2="51.75,0"
+                    Point3="51.75,4" />
+                  <mssgle:LineSegment
+                    End="51.75,49.1428571428571" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.75,49.1428571428571"
+                    Point2="51.75,53.1428571428571"
+                    Point3="55.75,53.1428571428571" />
+                  <mssgle:LineSegment
+                    End="96,53.1428571428571" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="33.91552734375,-15.4462890625,35.6689453125,9.4462890625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Đổ dữ liệu khu vực chi nhánh 2\KhuvucExcel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="134,42"
+          Id="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\XML Source"
+          TopLeft="24,5.5" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp"
+          TopLeft="100.5,280" />
+        <NodeLayout
+          Size="319.5,42"
+          Id="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\convert quocgia,vungmien,thanhpho theo file excel"
+          TopLeft="14,107.5" />
+        <EdgeLayout
+          Id="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1.Paths[Cus]"
+          TopLeft="91,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="82.75,60"
+              Start="0,0"
+              End="82.75,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="78.75,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="78.75,30"
+                    Point2="82.75,30"
+                    Point3="82.75,34" />
+                  <mssgle:LineSegment
+                    End="82.75,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="26.27052734375,35,30.2089453125,9.4462890625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="120.5,42"
+          Id="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\Union All"
+          TopLeft="140.5,184.5" />
+        <EdgeLayout
+          Id="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1.Paths[Derived Column Output]"
+          TopLeft="173.75,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="27,35"
+              Start="0,0"
+              End="27,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="4,17.5" />
+                  <mssgle:LineSegment
+                    End="23,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23,17.5"
+                    Point2="27,17.5"
+                    Point3="27,21.5" />
+                  <mssgle:LineSegment
+                    End="27,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-1.60447265625,22.5,30.2089453125,9.4462890625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1.Paths[Union All Output 1]"
+          TopLeft="200.75,226.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-19.75,53.5"
+              Start="0,0"
+              End="-19.75,46">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.75"
+                    Point2="0,26.75"
+                    Point3="-4,26.75" />
+                  <mssgle:LineSegment
+                    End="-15.75,26.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-15.75,26.75"
+                    Point2="-19.75,26.75"
+                    Point3="-19.75,30.75" />
+                  <mssgle:LineSegment
+                    End="-19.75,46" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-24.97947265625,31.75,30.2089453125,9.4462890625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Duyệt các file khách hàng chi nhánh 1\Đổ dữ liệu khu vực chi nhánh 1\table KhuvucTmp">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\sort là chép dữ liệu table tạm sang table chính thức">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="142.5,42"
+          Id="Package\sort là chép dữ liệu table tạm sang table chính thức\Table Khuvuc"
+          TopLeft="16,209.5" />
+        <NodeLayout
+          Size="163.5,42"
+          Id="Package\sort là chép dữ liệu table tạm sang table chính thức\Table KhuvucTmp"
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\sort là chép dữ liệu table tạm sang table chính thức\Sort"
+          TopLeft="38.25,107.5" />
+        <EdgeLayout
+          Id="Package\sort là chép dữ liệu table tạm sang table chính thức.Paths[Sort Output]"
+          TopLeft="87.25,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-18.1201171875,21.44873046875,36.240234375,9.6025390625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\sort là chép dữ liệu table tạm sang table chính thức.Paths[OLE DB Source Output]"
+          TopLeft="87.25,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-18.1494140625,21.46337890625,36.298828125,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Đổ dữ liệu khu vực chi nhánh 2\table KhuvucTmp">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

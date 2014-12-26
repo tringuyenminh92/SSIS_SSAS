@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Customers xmlns="CustomersXSDSchema">  
+    <Cus>
+        <CusNumber>Cus0151</CusNumber>
+        <CusName>Lê Thành Tài</CusName>
+        <Gender>Male </Gender>
+		<City>Bình Dương</City>
+		<State>Southern Vietnam</State>
+		<Country>Vietnam</Country>
+    </Cus>
+	<Cus>
+        <CusNumber>Cus0152</CusNumber>
+        <CusName>Trần Thanh Tâm</CusName>
+        <Gender>Female</Gender>
+		<City>Hải Phòng</City>
+		<State>Northern Vietnam</State>
+		<Country>Vietnam</Country>
+    </Cus>
+	<Cus>
+        <CusNumber>Cus0153</CusNumber>
+        <CusName>Trần Bình Minh</CusName>
+        <Gender>Male</Gender>
+		<City>Đà Nẵng</City>
+		<State>Middle Vietnam</State>
+		<Country>Vietnam</Country>
+    </Cus>
+	<Cus>
+        <CusNumber>Cus0154</CusNumber>
+        <CusName>Phan Ngọc Đức</CusName>
+        <Gender>Male</Gender>
+		<City>Huế</City>
+		<State>Middle Vietnam</State>
+		<Country>Vietnam</Country>
+    </Cus>
+</Customers>

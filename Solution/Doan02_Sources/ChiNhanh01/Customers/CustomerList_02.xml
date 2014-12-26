@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Customers xmlns="CustomersXSDSchema">  
+    <Cus>
+        <CusNumber>Cus0121</CusNumber>
+        <CusName>Richard S.</CusName>
+        <Gender>Male </Gender>
+		<City>Boston</City>
+		<State>New Jersey</State>
+		<Country>USA</Country>
+    </Cus>
+	<Cus>
+        <CusNumber>Cus0122</CusNumber>
+        <CusName>Michael N.</CusName>
+        <Gender>Male</Gender>
+		<City>Orlando</City>
+		<State>Florida</State>
+		<Country>USA</Country>
+    </Cus>
+	<Cus>
+        <CusNumber>Cus0123</CusNumber>
+        <CusName>Mick D.</CusName>
+        <Gender>Male</Gender>
+		<City>San Francisco</City>
+		<State>California</State>
+		<Country>USA</Country>
+    </Cus>
+	<Cus>
+        <CusNumber>Cus0124</CusNumber>
+        <CusName>Nguyễn Thanh Hằng</CusName>
+        <Gender>Female</Gender>
+		<City>HCM</City>
+		<State>Southern Vietnam</State>
+		<Country>Vietnam</Country>
+    </Cus>
+	<Cus>
+        <CusNumber>Cus0125</CusNumber>
+        <CusName>Lê Như Quỳnh</CusName>
+        <Gender>Female</Gender>
+		<City>Nam Định</City>
+		<State>Northern Vietnam</State>
+		<Country>Vietnam</Country>
+    </Cus>
+</Customers>

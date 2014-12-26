@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Customers xmlns="CustomersXSDSchema">  
+    <Cus>
+        <CusNumber>Cus0131</CusNumber>
+        <CusName>Lê Thanh Bình</CusName>
+        <Gender>Male </Gender>
+		<City>HCM</City>
+		<State>Southern Vietnam</State>
+		<Country>Vietnam</Country>
+    </Cus>
+	<Cus>
+        <CusNumber>Cus0132</CusNumber>
+        <CusName>Nguyễn Cao Cường</CusName>
+        <Gender>Male</Gender>
+		<City>Cần Thơ</City>
+		<State>Southern Vietnam</State>
+		<Country>Vietnam</Country>
+    </Cus>
+</Customers>

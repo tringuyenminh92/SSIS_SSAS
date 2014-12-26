@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Customers xmlns="CustomersXSDSchema">  
+    <Cus>
+        <CusNumber>Cus0111</CusNumber>
+        <CusName>Jane.L</CusName>
+        <Gender>Female</Gender>
+		<City>Austin</City>
+		<State>Texas</State>
+		<Country>USA</Country>
+    </Cus>
+	<Cus>
+        <CusNumber>Cus0112</CusNumber>
+        <CusName>Katerine.M</CusName>
+        <Gender>Female</Gender>
+		<City>Orlando</City>
+		<State>Florida</State>
+		<Country>USA</Country>
+    </Cus>
+	<Cus>
+        <CusNumber>Cus0113</CusNumber>
+        <CusName>John F.</CusName>
+        <Gender>Male</Gender>
+		<City>Austin</City>
+		<State>Texas</State>
+		<Country>USA</Country>
+    </Cus>
+</Customers>

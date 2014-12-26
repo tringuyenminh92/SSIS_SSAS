@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="CustomersXSDSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Customers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="Cus">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CusNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="CusName" type="xs:string" />
+              <xs:element minOccurs="0" name="Gender" type="xs:string" />
+              <xs:element minOccurs="0" name="City" type="xs:string" />
+              <xs:element minOccurs="0" name="State" type="xs:string" />
+              <xs:element minOccurs="0" name="Country" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

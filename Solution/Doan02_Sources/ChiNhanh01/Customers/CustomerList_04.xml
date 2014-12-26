@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Customers xmlns="CustomersXSDSchema">  
+    <Cus>
+        <CusNumber>Cus0141</CusNumber>
+        <CusName>Phạm Thanh Sơn</CusName>
+        <Gender>Male </Gender>
+		<City>Đồng Nai</City>
+		<State>Southern Vietnam</State>
+		<Country>Vietnam</Country>
+    </Cus>
+	<Cus>
+        <CusNumber>Cus0142</CusNumber>
+        <CusName>Lê Mỹ Dung</CusName>
+        <Gender>Female</Gender>
+		<City>Hà Nội</City>
+		<State>Northern Vietnam</State>
+		<Country>Vietnam</Country>
+    </Cus>
+</Customers>

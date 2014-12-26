@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "doangiaki", "doangiaki\doangiaki.dtproj", "{E2898D75-FF50-4F24-BD9F-227FC47DA7EF}"
+EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Doan02_SSAS", "Doan02_SSAS\Doan02_SSAS.dwproj", "{0C1C7A86-3D39-474D-926E-B7F1CFFFAF31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2898D75-FF50-4F24-BD9F-227FC47DA7EF}.Development|Default.ActiveCfg = Development
+		{E2898D75-FF50-4F24-BD9F-227FC47DA7EF}.Development|Default.Build.0 = Development
+		{0C1C7A86-3D39-474D-926E-B7F1CFFFAF31}.Development|Default.ActiveCfg = Development
+		{0C1C7A86-3D39-474D-926E-B7F1CFFFAF31}.Development|Default.Build.0 = Development
+		{0C1C7A86-3D39-474D-926E-B7F1CFFFAF31}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

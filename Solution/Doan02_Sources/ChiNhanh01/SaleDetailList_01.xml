@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<SaleDetails xmlns="SaleDetailsXSDSchema">  
+    <Detail>
+        <SaleNumber>S0001</SaleNumber>
+        <ItemName>Dầu ăn Tường An</ItemName>
+		<Quantity>5</Quantity>
+		<Price>32000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0001</SaleNumber>
+        <ItemName>Cam ép Twister</ItemName>
+		<Quantity>15</Quantity>
+		<Price>12000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0001</SaleNumber>
+        <ItemName>Coca cola</ItemName>
+		<Quantity>7</Quantity>
+		<Price>8500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0002</SaleNumber>
+        <ItemName>Bánh Hura</ItemName>
+		<Quantity>5</Quantity>
+		<Price>10500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0002</SaleNumber>
+        <ItemName>Bánh Goute</ItemName>
+		<Quantity>12</Quantity>
+		<Price>15600</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0002</SaleNumber>
+        <ItemName>Trà xanh O2</ItemName>
+		<Quantity>5</Quantity>
+		<Price>7500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0003</SaleNumber>
+        <ItemName>Bánh Hura</ItemName>
+		<Quantity>6</Quantity>
+		<Price>10500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0003</SaleNumber>
+        <ItemName>Bánh AFC</ItemName>
+		<Quantity>4</Quantity>
+		<Price>21500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0003</SaleNumber>
+        <ItemName>Bia Heineken</ItemName>
+		<Quantity>5</Quantity>
+		<Price>17000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0004</SaleNumber>
+        <ItemName>Pepsi</ItemName>
+		<Quantity>6</Quantity>
+		<Price>8000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0004</SaleNumber>
+        <ItemName>Sữa đậu nành Soya</ItemName>
+		<Quantity>3</Quantity>
+		<Price>11000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0005</SaleNumber>
+        <ItemName>Bánh Oreo</ItemName>
+		<Quantity>7</Quantity>
+		<Price>16800</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0005</SaleNumber>
+        <ItemName>Kẹo Alpenliebe</ItemName>
+		<Quantity>8</Quantity>
+		<Price>5800</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0005</SaleNumber>
+        <ItemName>Bánh Hura</ItemName>
+		<Quantity>3</Quantity>
+		<Price>10500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0006</SaleNumber>
+        <ItemName>Kẹo Golia</ItemName>
+		<Quantity>7</Quantity>
+		<Price>12500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0006</SaleNumber>
+        <ItemName>Bánh Solo</ItemName>
+		<Quantity>10</Quantity>
+		<Price>7500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0007</SaleNumber>
+        <ItemName>Bia Heineken</ItemName>
+		<Quantity>6</Quantity>
+		<Price>17000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0007</SaleNumber>
+        <ItemName>Bánh Goute</ItemName>
+		<Quantity>5</Quantity>
+		<Price>15600</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0008</SaleNumber>
+        <ItemName>Bánh Goute</ItemName>
+		<Quantity>4</Quantity>
+		<Price>15600</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0008</SaleNumber>
+        <ItemName>Bánh Cosy</ItemName>
+		<Quantity>10</Quantity>
+		<Price>9000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0009</SaleNumber>
+        <ItemName>Trà xanh O2</ItemName>
+		<Quantity>3</Quantity>
+		<Price>7500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0009</SaleNumber>
+        <ItemName>Kẹo Alpenliebe</ItemName>
+		<Quantity>13</Quantity>
+		<Price>5800</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0009</SaleNumber>
+        <ItemName>Kẹo Alpenliebe</ItemName>
+		<Quantity>13</Quantity>
+		<Price>5800</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0010</SaleNumber>
+        <ItemName>Bánh Custa</ItemName>
+		<Quantity>15</Quantity>
+		<Price>11000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0010</SaleNumber>
+        <ItemName>Dầu ăn Neptune</ItemName>
+		<Quantity>4</Quantity>
+		<Price>38500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0010</SaleNumber>
+        <ItemName>Bánh ChocoPie</ItemName>
+		<Quantity>6</Quantity>
+		<Price>14700</Price>
+    </Detail>
+</SaleDetails>

@@ -1,0 +1,89 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Doan02_SSAS</Database>
+    <Server>localhost</Server>
+    <ConnectionString>DataSource=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>GJQ6bdUpd1ML7IotypI8+xCT+6Q=11/12/2014 7:17:28 PM11/12/2014 7:17:28 PM</TimeStamp>
+        <ID>
+          <String>ERP BH DS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>xFQDaCDoCEbzpMLRB7ogmniNyp8=11/12/2014 7:17:50 PM11/12/2014 7:17:50 PM</TimeStamp>
+        <ID>
+          <String>ERP BH DSV</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>I/Pf24DZwZ2kPTkrBRDVHmXvLJo=11/12/2014 7:19:18 PM11/12/2014 7:18:15 PM</TimeStamp>
+        <ID>
+          <String>Dim Cuahang</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>chv0oU3Sdf4cCcV6hMdrYGi3P5c=11/12/2014 7:19:18 PM11/12/2014 7:18:15 PM</TimeStamp>
+        <ID>
+          <String>Dim Thoigian</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>dkMKqPlffa003DcKFJbs12ibF3k=11/12/2014 7:19:18 PM11/12/2014 7:18:15 PM</TimeStamp>
+        <ID>
+          <String>Dim Hanghoa</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>OzXPKmTJt362GWKGJZCqPSk9Ovg=11/12/2014 7:19:18 PM11/12/2014 7:18:15 PM</TimeStamp>
+        <ID>
+          <String>Dim Khachhang</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>8FkMQh+SJjP2D8KH/UkbTApRlbQ=11/12/2014 7:19:18 PM11/12/2014 7:18:15 PM</TimeStamp>
+        <ID>
+          <String>Dim Khuvuc</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>OO7g4srRT8ESbyQCBdR3B6FUxeA=11/12/2014 7:19:18 PM11/12/2014 7:18:15 PMJLfFzYqX3bwG7ekHDCa3umVhLrE=11/12/2014 7:18:15 PM11/12/2014 7:18:15 PM</TimeStamp>
+        <ID>
+          <String>ERP BH CUBES</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>QIhEuRXkN9lcWOROersNWRq8XYU=08/12/2014 10:24:00 AM08/12/2014 10:24:00 AM</TimeStamp>
+      <ID>
+        <String>Doan02_SSAS</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2014-12-11T12:20:23.503333Z</LastDeployed>
+</DeploymentSnapshot>

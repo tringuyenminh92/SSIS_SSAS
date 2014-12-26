@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<Sales xmlns="SalesXSDSchema">  
+    <Sale>
+        <SaleNumber>S0011</SaleNumber>
+        <CusNumber>Cus0131</CusNumber>
+		<Store>Cửa hàng thực phẩm số 1</Store>
+		<Date>2014/01/27</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0012</SaleNumber>
+        <CusNumber>Cus0132</CusNumber>
+		<Store>Cửa hàng thực phẩm số 3</Store>
+		<Date>2014/01/21</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0013</SaleNumber>
+        <CusNumber>Cus0141</CusNumber>
+		<Store>Cửa hàng thực phẩm số 2</Store>
+		<Date>2014/03/20</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0014</SaleNumber>
+        <CusNumber>Cus0142</CusNumber>
+		<Store>Cửa hàng thực phẩm số 3</Store>
+		<Date>2014/04/16</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0015</SaleNumber>
+        <CusNumber>Cus0132</CusNumber>
+		<Store>Cửa hàng thực phẩm số 3</Store>
+		<Date>2014/05/17</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0016</SaleNumber>
+        <CusNumber>Cus0131</CusNumber>
+		<Store>Cửa hàng thực phẩm số 2</Store>
+		<Date>2014/07/18</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0017</SaleNumber>
+        <CusNumber>Cus0141</CusNumber>
+		<Store>Cửa hàng thực phẩm số 1</Store>
+		<Date>2014/09/15</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0018</SaleNumber>
+        <CusNumber>Cus0161</CusNumber>
+		<Store>Cửa hàng thực phẩm số 1</Store>
+		<Date>2014/10/25</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0019</SaleNumber>
+        <CusNumber>Cus0142</CusNumber>
+		<Store>Cửa hàng thực phẩm số 2</Store>
+		<Date>2014/12/21</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0020</SaleNumber>
+        <CusNumber>Cus0161</CusNumber>
+		<Store>Cửa hàng thực phẩm số 3</Store>
+		<Date>2014/12/28</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0021</SaleNumber>
+        <CusNumber>Cus0154</CusNumber>
+		<Store>Cửa hàng thực phẩm số 1</Store>
+		<Date>2014/02/09</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0022</SaleNumber>
+        <CusNumber>Cus0153</CusNumber>
+		<Store>Cửa hàng thực phẩm số 3</Store>
+		<Date>2014/03/11</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0023</SaleNumber>
+        <CusNumber>Cus0152</CusNumber>
+		<Store>Cửa hàng thực phẩm số 2</Store>
+		<Date>2014/03/14</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0024</SaleNumber>
+        <CusNumber>Cus0151</CusNumber>
+		<Store>Cửa hàng thực phẩm số 1</Store>
+		<Date>2014/06/15</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0025</SaleNumber>
+        <CusNumber>Cus0151</CusNumber>
+		<Store>Cửa hàng thực phẩm số 1</Store>
+		<Date>2014/07/20</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0026</SaleNumber>
+        <CusNumber>Cus0153</CusNumber>
+		<Store>Cửa hàng thực phẩm số 1</Store>
+		<Date>2014/08/19</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0027</SaleNumber>
+        <CusNumber>Cus0152</CusNumber>
+		<Store>Cửa hàng thực phẩm số 2</Store>
+		<Date>2014/09/29</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0028</SaleNumber>
+        <CusNumber>Cus0153</CusNumber>
+		<Store>Cửa hàng thực phẩm số 2</Store>
+		<Date>2014/10/18</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0029</SaleNumber>
+        <CusNumber>Cus0154</CusNumber>
+		<Store>Cửa hàng thực phẩm số 1</Store>
+		<Date>2014/11/17</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0030</SaleNumber>
+        <CusNumber>Cus0153</CusNumber>
+		<Store>Cửa hàng thực phẩm số 2</Store>
+		<Date>2014/12/24</Date>
+    </Sale>
+</Sales>
+

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Sales xmlns="SalesXSDSchema">  
+    <Sale>
+        <SaleNumber>S0001</SaleNumber>
+        <CusNumber>Cus0112</CusNumber>
+		<Store>Royal Blue Grocery</Store>
+		<Date>2013/08/15</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0002</SaleNumber>
+        <CusNumber>Cus0111</CusNumber>
+		<Store>Orlando Grocery</Store>
+		<Date>2013/01/21</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0003</SaleNumber>
+        <CusNumber>Cus0122</CusNumber>
+		<Store>Foodie Store</Store>
+		<Date>2013/08/20</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0004</SaleNumber>
+        <CusNumber>Cus0121</CusNumber>
+		<Store>Rainbow Grocery Store</Store>
+		<Date>2013/02/16</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0005</SaleNumber>
+        <CusNumber>Cus0123</CusNumber>
+		<Store>Foodie Store</Store>
+		<Date>2013/10/20</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0006</SaleNumber>
+        <CusNumber>Cus0113</CusNumber>
+		<Store>Royal Blue Grocery</Store>
+		<Date>2013/03/10</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0007</SaleNumber>
+        <CusNumber>Cus0121</CusNumber>
+		<Store>Rainbow Grocery Store</Store>
+		<Date>2013/11/21</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0008</SaleNumber>
+        <CusNumber>Cus0121</CusNumber>
+		<Store>Rainbow Grocery Store</Store>
+		<Date>2013/11/25</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0009</SaleNumber>
+        <CusNumber>Cus0124</CusNumber>
+		<Store>Cửa hàng thực phẩm số 2</Store>
+		<Date>2013/05/12</Date>
+    </Sale>
+	<Sale>
+        <SaleNumber>S0010</SaleNumber>
+        <CusNumber>Cus0125</CusNumber>
+		<Store>Cửa hàng thực phẩm số 2</Store>
+		<Date>2013/06/14</Date>
+    </Sale>
+</Sales>

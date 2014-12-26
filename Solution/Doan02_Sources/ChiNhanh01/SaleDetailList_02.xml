@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<SaleDetails xmlns="SaleDetailsXSDSchema">  
+    <Detail>
+        <SaleNumber>S0011</SaleNumber>
+        <ItemName>Cam ép Twister</ItemName>
+		<Quantity>6</Quantity>
+		<Price>12000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0011</SaleNumber>
+        <ItemName>Bánh Hura</ItemName>
+		<Quantity>15</Quantity>
+		<Price>10500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0012</SaleNumber>
+        <ItemName>Coca cola</ItemName>
+		<Quantity>10</Quantity>
+		<Price>8500</Price>
+    </Detail>
+		<Detail>
+        <SaleNumber>S0012</SaleNumber>
+        <ItemName>Bánh AFC</ItemName>
+		<Quantity>7</Quantity>
+		<Price>21500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0013</SaleNumber>
+        <ItemName>Bánh Goute</ItemName>
+		<Quantity>4</Quantity>
+		<Price>15600</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0013</SaleNumber>
+        <ItemName>Trà xanh O2</ItemName>
+		<Quantity>10</Quantity>
+		<Price>7500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0013</SaleNumber>
+        <ItemName>Bánh ChocoPie</ItemName>
+		<Quantity>8</Quantity>
+		<Price>14700</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0014</SaleNumber>
+        <ItemName>Bánh Hura</ItemName>
+		<Quantity>15</Quantity>
+		<Price>10500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0015</SaleNumber>
+        <ItemName>Bánh AFC</ItemName>
+		<Quantity>6</Quantity>
+		<Price>21500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0015</SaleNumber>
+        <ItemName>Bia Heineken</ItemName>
+		<Quantity>15</Quantity>
+		<Price>17000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0015</SaleNumber>
+        <ItemName>Dầu ăn Neptune</ItemName>
+		<Quantity>10</Quantity>
+		<Price>38500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0016</SaleNumber>
+        <ItemName>Cam ép Twister</ItemName>
+		<Quantity>10</Quantity>
+		<Price>12000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0016</SaleNumber>
+        <ItemName>Pepsi</ItemName>
+		<Quantity>4</Quantity>
+		<Price>8000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0017</SaleNumber>
+        <ItemName>Sữa đậu nành Soya</ItemName>
+		<Quantity>20</Quantity>
+		<Price>11000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0017</SaleNumber>
+        <ItemName>Bánh Oreo</ItemName>
+		<Quantity>10</Quantity>
+		<Price>16800</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0018</SaleNumber>
+        <ItemName>Bánh Cosy</ItemName>
+		<Quantity>10</Quantity>
+		<Price>9000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0018</SaleNumber>
+        <ItemName>Pepsi</ItemName>
+		<Quantity>12</Quantity>
+		<Price>8000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0019</SaleNumber>
+        <ItemName>Bánh Hura</ItemName>
+		<Quantity>30</Quantity>
+		<Price>10500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0020</SaleNumber>
+        <ItemName>Kẹo Golia</ItemName>
+		<Quantity>14</Quantity>
+		<Price>12500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0020</SaleNumber>
+        <ItemName>Pepsi</ItemName>
+		<Quantity>10</Quantity>
+		<Price>8000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0020</SaleNumber>
+        <ItemName>Bia Heineken</ItemName>
+		<Quantity>12</Quantity>
+		<Price>17000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0021</SaleNumber>
+        <ItemName>Bánh Goute</ItemName>
+		<Quantity>15</Quantity>
+		<Price>15600</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0021</SaleNumber>
+        <ItemName>Dầu ăn Neptune</ItemName>
+		<Quantity>2</Quantity>
+		<Price>38500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0021</SaleNumber>
+        <ItemName>Bánh Cosy</ItemName>
+		<Quantity>5</Quantity>
+		<Price>9000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0022</SaleNumber>
+        <ItemName>Trà xanh O2</ItemName>
+		<Quantity>7</Quantity>
+		<Price>7500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0022</SaleNumber>
+        <ItemName>Bánh Oreo</ItemName>
+		<Quantity>15</Quantity>
+		<Price>16800</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0023</SaleNumber>
+        <ItemName>Kẹo Alpenliebe</ItemName>
+		<Quantity>10</Quantity>
+		<Price>5800</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0023</SaleNumber>
+        <ItemName>Bánh Hura</ItemName>
+		<Quantity>8</Quantity>
+		<Price>10500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0024</SaleNumber>
+        <ItemName>Dầu ăn Tường An</ItemName>
+		<Quantity>7</Quantity>
+		<Price>32000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0024</SaleNumber>
+        <ItemName>Coca cola</ItemName>
+		<Quantity>12</Quantity>
+		<Price>8500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0025</SaleNumber>
+        <ItemName>Bánh ChocoPie</ItemName>
+		<Quantity>8</Quantity>
+		<Price>14700</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0026</SaleNumber>
+        <ItemName>Coca cola</ItemName>
+		<Quantity>10</Quantity>
+		<Price>8500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0026</SaleNumber>
+        <ItemName>Sữa đậu nành Soya</ItemName>
+		<Quantity>20</Quantity>
+		<Price>11000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0027</SaleNumber>
+        <ItemName>Bánh AFC</ItemName>
+		<Quantity>15</Quantity>
+		<Price>21500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0027</SaleNumber>
+        <ItemName>Dầu ăn Tường An</ItemName>
+		<Quantity>3</Quantity>
+		<Price>32000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0028</SaleNumber>
+        <ItemName>Dầu ăn Tường An</ItemName>
+		<Quantity>11</Quantity>
+		<Price>32000</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0029</SaleNumber>
+        <ItemName>Bánh ChocoPie</ItemName>
+		<Quantity>17</Quantity>
+		<Price>14700</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0029</SaleNumber>
+        <ItemName>Dầu ăn Neptune</ItemName>
+		<Quantity>5</Quantity>
+		<Price>38500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0030</SaleNumber>
+        <ItemName>Dầu ăn Neptune</ItemName>
+		<Quantity>7</Quantity>
+		<Price>38500</Price>
+    </Detail>
+	<Detail>
+        <SaleNumber>S0030</SaleNumber>
+        <ItemName>Kẹo Golia</ItemName>
+		<Quantity>3</Quantity>
+		<Price>12500</Price>
+    </Detail>
+</SaleDetails>

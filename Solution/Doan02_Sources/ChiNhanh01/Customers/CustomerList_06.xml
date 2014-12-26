@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Customers xmlns="CustomersXSDSchema">  
+	<Cus>
+        <CusNumber>Cus0161</CusNumber>
+        <CusName>Nguyễn Cẩm Tú</CusName>
+        <Gender>Female</Gender>
+		<City>Quảng Ngãi</City>
+		<State>Middle Vietnam</State>
+		<Country>Vietnam</Country>
+    </Cus>
+</Customers>

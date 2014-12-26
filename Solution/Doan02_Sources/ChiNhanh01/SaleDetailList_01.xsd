@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="SaleDetailsXSDSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SaleDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="Detail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SaleNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="ItemName" type="xs:string" />
+              <xs:element minOccurs="0" name="Quantity" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="Price" type="xs:unsignedShort" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

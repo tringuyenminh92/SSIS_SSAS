@@ -1,0 +1,29 @@
+﻿--Cho biết tất cả các measures (theo cột) 
+--của từng hàng hóa thuộc hai chủng loại Bánh kẹo và Dầu ăn.
+with member Measures.DG as [Measures].[Dongia]/[Measures].[Fact Sales Count]
+select {Measures.DG,[Measures].[Soluong],[Measures].[Thanhtien]} on 0,
+	({[Dim Hanghoa].[Chungloai].&[Dầu ăn],[Dim Hanghoa].[Chungloai].&[Bánh kẹo]},[Dim Hanghoa].[Tenhh].[Tenhh].members) on 1
+from  [ERP BH Cubes];
+
+--Cho biết tất cả các measures (theo cột) 
+--của từng quốc gia và drill down xuống đến các thành phố (theo dòng).
+go
+select {[Measures].[Dongia],[Measures].[Soluong],[Measures].[Thanhtien],[Measures].[Fact Sales Count]} on 0,
+	DESCENDANTS([Dim Khuvuc].[Hierarchy].[Quocgia] ,2) on 1
+from  [ERP BH Cubes];
+
+--Cho biết số lượng mua hàng của các chủng loại (theo cột) 
+--và theo mỗi cửa hàng (theo dòng) trong quý 3 và quý 4 năm 2014.
+go
+select [Dim Hanghoa].[Chungloai].[Chungloai].MEMBERS  on 0,
+[Dim Cuahang].[Tench].[Tench].members on 1
+from  [ERP BH Cubes]
+where ([Measures].[Soluong],{[Dim Thoigian].[Hierarchy].[Nam].&[2014].&[3],[Dim Thoigian].[Hierarchy].[Nam].&[2014].&[4]});
+
+--Cho biết doanh số trung bình (được định nghĩa bằng thành tiền / số lần giao dịch) của mỗi miền/bang.
+go
+with member Measures.DoanhsoTrungbinh as [Measures].[Thanhtien]/[Measures].[Fact Sales Count]
+select [Measures].[DoanhsoTrungbinh]  on 0,
+[Dim Khuvuc].[Vungmien].[Vungmien].members on 1
+from  [ERP BH Cubes];
+
